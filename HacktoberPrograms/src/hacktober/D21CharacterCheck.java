@@ -17,15 +17,15 @@ public class D21CharacterCheck {
 		char letter = scan.nextLine().charAt(0);
 		scan.close();
 		
-		System.out.println(checkConsecutiveCharacters(word,0,letter));
+		System.out.println(checkCharacter(word,0,letter));
 	}
 	
-	boolean checkConsecutiveCharacters(String word,int index,char letter) {
+	boolean checkCharacter(String word,int index,char letter) {
 		if(index==word.length())
 			return false;
 		if(word.charAt(index)==letter)
 			return true;
-		return checkConsecutiveCharacters(word,index+1,letter);	
+		return checkCharacter(word,index+1,letter);	
 	}
 
 }
